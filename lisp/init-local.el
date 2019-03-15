@@ -14,8 +14,8 @@
 (set-face-attribute 'default nil :height 160)
 
 ;; Config for chinese input method.
-(require 'pyim)
-(require 'pyim-basedict)
+(require-package 'pyim)
+(require-package 'pyim-basedict)
 (setq default-input-method "pyim")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
 (setq pyim-default-scheme 'quanpin)
@@ -24,8 +24,12 @@
 ;; To enable go-mode and related features, you should install packages
 ;; including go-mode, go-autocomplete and backends tools to make coding
 ;; golang more effective, such as gofmt, golint and so on.
+(require-package 'go-mode)
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 (add-to-list 'load-path "~/.emacs.d/golang")
+;; Use require here instead of require-package. The go-autocomplete is
+;; provided by go-autocomplete.el under ~/.emacs.d/golang/ downloaded
+;; manually.
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
