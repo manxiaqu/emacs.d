@@ -13,6 +13,13 @@
 ;; Set default font.
 (set-face-attribute 'default nil :height 160)
 
+;; Config for chinese input method.
+(require 'pyim)
+(require 'pyim-basedict)
+(setq default-input-method "pyim")
+(global-set-key (kbd "C-\\") 'toggle-input-method)
+(setq pyim-default-scheme 'quanpin)
+
 ;; Config for golang.
 ;; To enable go-mode and related features, you should install packages
 ;; including go-mode, go-autocomplete and backends tools to make coding
