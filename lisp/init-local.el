@@ -33,7 +33,7 @@
 ;; Use require here instead of require-package. The go-autocomplete is
 ;; provided by go-autocomplete.el under ~/.emacs.d/golang/ downloaded
 ;; manually.
-(require 'go-autocomplete)
+(require-package 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
 ;; Reset key for chosing text of auto-complete.
@@ -41,6 +41,13 @@
 (define-key ac-completing-map (kbd "C-p") 'ac-previous)
 ;; Fmt go files with gofmt automatically when save files.
 (add-hook 'before-save-hook 'gofmt-before-save)
+;; Config for go-eldoc which shows type of variables.
+(require-package 'go-eldoc)
+(add-hook 'go-mode-hook 'go-eldoc-setup)
+
+;; Config for neotree to view directory as a tree.
+(require-package 'neotree)
+(global-set-key (kbd "<f8>") 'neotree-toggle)
 
 ;; Set f2 to open config file(.emacs) quickly.
 (defun openConfig ()
