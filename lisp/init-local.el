@@ -45,6 +45,9 @@
 (require-package 'go-eldoc)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 
+;; Disable backup files automatically.
+(setq make-backup-files nil)
+
 ;; Config for neotree to view directory as a tree.
 (require-package 'neotree)
 (global-set-key (kbd "<f8>") 'neotree-toggle)
