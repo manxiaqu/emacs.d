@@ -13,14 +13,16 @@
 ;; Set default font.
 (set-face-attribute 'default nil :height 160)
 
+
 ;; Config for chinese input method.
 (require-package 'pyim)
 (require-package 'pyim-basedict)
 (require 'pyim)
 (require 'pyim-basedict)
+(pyim-basedict-enable)
 (setq default-input-method "pyim")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
-;;; for gist package.
+;;; For gist package.
 (require-package 'gist)
 
 ;; Config for golang.
