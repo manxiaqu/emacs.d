@@ -16,11 +16,11 @@
 ;; Config for chinese input method.
 (require-package 'pyim)
 (require-package 'pyim-basedict)
+(require 'pyim)
+(require 'pyim-basedict)
 (setq default-input-method "pyim")
 (global-set-key (kbd "C-\\") 'toggle-input-method)
-(setq pyim-default-scheme 'quanpin)
-
-;; Config for gist package.
+;;; for gist package.
 (require-package 'gist)
 
 ;; Config for golang.
