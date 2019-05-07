@@ -53,6 +53,8 @@
 ;; Config for neotree to view directory as a tree.
 (require-package 'neotree)
 (global-set-key (kbd "<f8>") 'neotree-toggle)
+;; auto set up neotree
+(neotree-toggle)
 
 ;; Set f2 to open config file(.emacs) quickly.
 (defun openConfig ()
