@@ -54,7 +54,6 @@
 (require-package 'command-log-mode)
 
 (require 'init-frame-hooks)
-(require 'init-xterm)
 (require 'init-themes)
 (require 'init-osx-keys)
 (require 'init-gui-frames)
@@ -79,7 +78,6 @@
 (require 'init-whitespace)
 
 (require 'init-vc)
-(require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
 
@@ -92,25 +90,16 @@
 (require 'init-csv)
 (require 'init-erlang)
 (require 'init-javascript)
-(require 'init-php)
 (require 'init-org)
 (require 'init-nxml)
 (require 'init-html)
-(require 'init-css)
 (require 'init-haml)
 (require 'init-http)
-(require 'init-python)
-(require 'init-haskell)
-(require 'init-elm)
-(require 'init-purescript)
-(require 'init-ruby)
-(require 'init-rails)
 (require 'init-sql)
 (require 'init-rust)
 (require 'init-toml)
 (require 'init-yaml)
 (require 'init-docker)
-(require 'init-terraform)
 ;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
@@ -127,7 +116,6 @@
 (require 'init-misc)
 
 (require 'init-folding)
-(require 'init-dash)
 
 ;;(require 'init-twitter)
 ;; (require 'init-mu)

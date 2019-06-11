@@ -13,6 +13,14 @@
 ;; Set default font.
 (set-face-attribute 'default nil :height 160)
 
+;; show line number
+(setq global-linum-mode t)
+(add-hook 'prog-mode-hook 'linum-mode)
+
+;; set org mode.
+(setq org-todo-keywords
+      '((sequence "TODO(t!)" "NEXT(n)" "WAITTING(w)" "SOMEDAY(s)" "|" "DONE(d@/!)" "ABORT(a@/!)")
+        ))
 
 ;; Config for chinese input method.
 (require-package 'pyim)
@@ -49,6 +57,10 @@
 
 ;; Disable backup files automatically.
 (setq make-backup-files nil)
+
+;; Set up solidity.
+(require-package 'solidity-mode)
+(require-package 'company-solidity)
 
 ;; Config for neotree to view directory as a tree.
 (require-package 'neotree)
